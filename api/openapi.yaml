@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  title: Api
+  version: 1.0.0
+  license:
+    name: UNLICENSED
+paths:
+  /:
+    x-exegesis-controller: Home
+    get:
+      summary: Root path showing app name and version number
+      operationId: index
+      security: [] #exclude from security check
+      tags:
+        - Home
+
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                properties:
+                  info_payload:
+                    description: Basic app info
+                    type: object
+        default:
+          description: Unexpected error.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - message
+                properties:
+                  message:
+                    type: string

@@ -1,0 +1,20 @@
+diff --git a/node_modules/patch-package/dist/makePatch.js b/node_modules/patch-package/dist/makePatch.js
+index 84275f2..a2547a6 100644
+--- a/node_modules/patch-package/dist/makePatch.js
++++ b/node_modules/patch-package/dist/makePatch.js
+@@ -88,6 +88,7 @@ function makePatch(_a) {
+                 spawnSafe_1.spawnSafeSync("npm", ["i"], {
+                     cwd: tmpRepoNpmRoot,
+                     logStdErrOnError: false,
++                    stdio: 'ignore',
+                 });
+             }
+             catch (e) {
+@@ -95,6 +96,7 @@ function makePatch(_a) {
+                 // an implicit context which we havn't reproduced
+                 spawnSafe_1.spawnSafeSync("npm", ["i", "--ignore-scripts"], {
+                     cwd: tmpRepoNpmRoot,
++                    stdio: 'ignore',
+                 });
+             }
+         }

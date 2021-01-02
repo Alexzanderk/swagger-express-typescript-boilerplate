@@ -1,0 +1,33 @@
+diff --git a/node_modules/exegesis-plugin-swagger-ui-express/src/index.d.ts b/node_modules/exegesis-plugin-swagger-ui-express/src/index.d.ts
+new file mode 100644
+index 0000000..9c6341c
+--- /dev/null
++++ b/node_modules/exegesis-plugin-swagger-ui-express/src/index.d.ts
+@@ -0,0 +1,27 @@
++declare module "exegesis-plugin-swagger-ui-express" {
++    import { ExegesisPlugin } from "exegesis";
++    import { Express } from "express";
++    // import { SwaggerUiOptions } from "swagger-ui-express";
++
++    interface Options {
++        app: Express;
++        path: string;
++        // swaggerUIOptions?: SwaggerUiOptions;
++        swaggerUIOptions: {
++            customCss?: string;
++            customCssUrl?: string;
++            customfavIcon?: string;
++            customJs?: string;
++            customSiteTitle?: string;
++            /** Show the explore search bar. */
++            explorer?: boolean;
++            options?: object;
++            swaggerUrl?: string;
++            swaggerUrls?: string[];
++        };
++    }
++
++    export default function exegesisSwaggerUIPlugin(
++        options: Options
++    ): ExegesisPlugin;
++}

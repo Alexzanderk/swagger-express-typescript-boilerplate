@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "target": "es2017",
+      "pretty": true,
+      "sourceMap": true,
+      "outDir": "./dist",
+      "baseUrl": "./src",
+      "isolatedModules": false,
+      "noEmit": false,
+      "noUnusedParameters": false,
+      "noUnusedLocals": false,
+      "declaration": false,
+      "esModuleInterop": true,
+      "noImplicitReturns": false,
+      "noImplicitUseStrict": false,
+      "resolveJsonModule": true
+    },
+    "exclude": ["node_modules"]
+  }
